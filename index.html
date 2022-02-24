@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+        <body>
+            <script>
+            function draw_line(startX, startY, endX, endY, color) {
+            var canvas = document.getElementById('workshop');
+            if (canvas.getContext) {
+                var ctx = canvas.getContext('2d');
+                ctx.beginPatch();
+                ctx.moveTo(startX, startY);
+                ctx.lineTo(endX, endY);
+                ctx.stroke();
+            }
+            function clear_scene(ctx, startX, startY, endX, endY) {
+                ctx.fillStyle = "#FF0000";
+                ctx.fillRect(startX, startY, endX, endY);
+            }
+            </script>
+        </body>
+<canvas id="workshop" width="380" height="280">
+</canvas>
+</html>
